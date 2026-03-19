@@ -6,54 +6,88 @@
     <title>Harbor Dental Clinic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Urbanist:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="wrap header">
-      <a class="logo" href="#">Harbor Dental</a>
-      <nav>
-        <a href="#care">診療内容</a>
-        <a href="#doctor">医師紹介</a>
-        <a href="#access">アクセス</a>
+    <div class="bg-layer"></div>
+    <header class="site-header container">
+      <a class="brand" href="#top">Harbor Dental</a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="メニュー">☰</button>
+      <nav class="nav-links">
+        <a href="#care">Care</a>
+        <a href="#flow">Flow</a>
+        <a href="#voices">Voices</a>
+        <a href="#reserve">Reserve</a>
       </nav>
-      <a class="cta" href="#reserve">予約</a>
     </header>
 
-    <main class="wrap">
-      <section class="hero">
-        <p class="sub">FAMILY DENTAL CARE</p>
-        <h1>痛みを抑えた、丁寧な歯科診療。</h1>
-        <p>予防から審美まで、患者様のライフスタイルに合わせた治療計画をご提案します。</p>
+    <main id="top" class="container">
+      <section class="hero reveal">
+        <span class="badge">FAMILY DENTAL CARE</span>
+        <div class="hero-grid">
+          <div>
+            <h1>痛みを抑えた、丁寧な歯科診療。</h1>
+            <p class="lead">予防歯科から審美治療まで、患者さまの生活背景を踏まえた治療計画を提案。説明責任を重視した診療を行います。</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#reserve">予約する</a>
+              <a class="btn ghost" href="#care">診療内容を見る</a>
+            </div>
+          </div>
+          <aside class="hero-stats">
+            <article><strong data-count="18" data-suffix="年">0年</strong><span>地域診療実績</span></article>
+            <article><strong data-count="97" data-suffix="%">0%</strong><span>治療説明への満足度</span></article>
+            <article><strong data-count="40" data-suffix="分">0分</strong><span>初診カウンセリング枠</span></article>
+          </aside>
+        </div>
       </section>
 
-      <section class="care" id="care">
-        <article><h2>予防歯科</h2><p>定期検診とクリーニングで将来の治療コストを抑えます。</p></article>
-        <article><h2>小児歯科</h2><p>お子様の不安に配慮した診療導線を整えています。</p></article>
-        <article><h2>審美治療</h2><p>ホワイトニングやセラミック治療にも対応します。</p></article>
+      <section class="section reveal" id="care">
+        <div class="section-head"><span class="eyebrow">CARE MENU</span><h2>診療メニュー</h2></div>
+        <div class="card-grid three">
+          <article class="card"><h3>予防歯科</h3><p>定期検診とクリーニングで将来の治療コストを抑制。</p><strong>検診 30分</strong></article>
+          <article class="card"><h3>小児歯科</h3><p>お子さまの不安を軽減するステップ型診療。</p><strong>キッズ対応</strong></article>
+          <article class="card"><h3>審美治療</h3><p>ホワイトニングやセラミックにも対応。</p><strong>個別プラン</strong></article>
+        </div>
       </section>
 
-      <section class="doctor" id="doctor">
-        <h2>院長プロフィール</h2>
-        <p>大学病院と地域医療の経験を活かし、説明責任を重視した診療を実践しています。</p>
+      <section class="section reveal" id="flow">
+        <div class="section-head"><span class="eyebrow">TREATMENT FLOW</span><h2>診療フロー</h2></div>
+        <div class="process-list">
+          <article><h3>初診相談</h3><p>現状とお悩みを丁寧にヒアリング。</p></article>
+          <article><h3>治療計画</h3><p>期間、費用、優先順位を明確に説明。</p></article>
+          <article><h3>継続フォロー</h3><p>治療後のメンテナンスまで継続支援。</p></article>
+        </div>
       </section>
 
-      <section class="access" id="access">
-        <h2>アクセス</h2>
-        <ul>
-          <li>東京都品川区東五反田 3-4-8</li>
-          <li>平日 9:00-19:00 / 土曜 9:00-14:00</li>
-          <li>五反田駅 徒歩4分</li>
-        </ul>
+      <section class="section reveal" id="voices">
+        <div class="section-head"><span class="eyebrow">PATIENT VOICES</span><h2>患者さまの声</h2></div>
+        <div class="review-grid">
+          <blockquote>「治療前の説明が分かりやすく、不安がなくなりました。」</blockquote>
+          <blockquote>「子どもが嫌がらず通える環境で助かっています。」</blockquote>
+          <blockquote>「予約が取りやすく、待ち時間も短いです。」</blockquote>
+        </div>
       </section>
 
-      <section class="reserve" id="reserve">
-        <h2>ご予約・お問い合わせ</h2>
-        <a href="mailto:reserve@harbor-dental.jp">reserve@harbor-dental.jp</a>
+      <section class="section reveal" id="reserve">
+        <div class="contact-panel">
+          <div>
+            <span class="eyebrow">RESERVE</span>
+            <h2>診療予約・お問い合わせ</h2>
+            <p>症状やご希望日時を送信ください。空き枠と初診案内を返信します。</p>
+          </div>
+          <form class="contact-form">
+            <input type="text" placeholder="お名前" required />
+            <input type="email" placeholder="メールアドレス" required />
+            <textarea placeholder="症状・相談内容"></textarea>
+            <button type="submit" class="btn primary">送信する</button>
+          </form>
+        </div>
       </section>
     </main>
 
-    <footer class="wrap">© <span id="year"></span> Harbor Dental Clinic</footer>
+    <footer class="container">© <span id="year"></span> Harbor Dental Clinic</footer>
+    <div class="toast" id="toast">ご連絡ありがとうございます。受付より返信します。</div>
     <script src="app.js"></script>
   </body>
 </html>
